@@ -47,13 +47,13 @@ for i in range(num_subjects):
             f"➡ You need +{cat2_extra:.2f} marks from CAT2 and +{cat3_extra:.2f} from CAT3 to pass."
         )
 
-    with st.expander(f"Result for Subject {i+1}"):
-        st.write(f"**Converted Marks:**")
-        st.write(f"- CAT 1: {cat1_conv:.2f} / 12")
-        st.write(f"- CAT 2: {cat2_conv:.2f} / 6")
-        st.write(f"- CAT 3: {cat3_conv:.2f} / 12")
-        st.write(f"- Assignment: {assign_conv:.2f} / 10")
-        st.write(status)
+    st.write(f"**Result for Subject {i+1}:**")
+    st.write(f"**Converted Marks:**")
+    st.write(f"- CAT 1: {cat1_conv:.2f} / 12")
+    st.write(f"- CAT 2: {cat2_conv:.2f} / 6")
+    st.write(f"- CAT 3: {cat3_conv:.2f} / 12")
+    st.write(f"- Assignment: {assign_conv:.2f} / 10")
+    st.write(status)
 
     results.append({
         "Subject": f"Subject {i+1}",
@@ -67,3 +67,4 @@ st.divider()
 if results:
     st.subheader("📊 Summary of All Subjects")
     st.dataframe(results)
+
